@@ -10,12 +10,17 @@ using System.Windows.Forms;
 
 namespace WindowedWerewolf
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        private PlayerRoles[] defaultRoleList = new PlayerRoles[] { new PlayerRoles("Burger", PlayerRoles.ROLE_ANY_LEFT_LABEL), new PlayerRoles("Zieneres", "1"), new PlayerRoles("Weerwolf", "2")};
+        private String[] defaultRoles = new String[] { "Barry", "Ziona", "Willem", "Harry", "Heroen", "Dirk" };
+        public Menu()
         {
             InitializeComponent();
             roleAmount.Items.AddRange(new String[] { PlayerRoles.ROLE_ANY_LEFT_LABEL, "1", "2", "3", "4", "5"});
+            roleList.Items.AddRange(defaultRoleList);
+            roleName.Items.AddRange(defaultRoles);
+            playerList.Items.AddRange(defaultRoles);
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,7 +49,7 @@ namespace WindowedWerewolf
                 PlayerRoles removePr = null;
                 foreach (PlayerRoles pr in roleList.Items)
                 {
-                    if (pr.name.Equals(role))
+                    if (pr.name.Equals(role, StringComparison.CurrentCultureIgnoreCase))
                     {
                         removePr = pr;
                     }
@@ -106,7 +111,7 @@ namespace WindowedWerewolf
                 int playerCount = playerList.Items.Count;
                 if (playerCount < 1)
                 {
-                    throw new Exception("Niet genoeg spelers voor een nieuw spel");
+                    throw new GameInitializationException("Niet genoeg spelers voor een nieuw spel");
                 }
 
                 // Dan controleren of er wel rollen zijn, iets moeilijker..
@@ -124,55 +129,30 @@ namespace WindowedWerewolf
                         roleCount += pr.amount;
                     }
                 }
-                if (roleCount < 1 && !wildCardRole)
+                if (roleCount < 1 && !wildCardRole) 
                 {
-                    throw new Exception("Geen rollen gedefiniëerd");
+                    throw new GameInitializationException("Geen rollen gedefiniëerd");
+                }
+                else if (roleCount > playerCount || (wildCardRole && roleCount - 1 > playerCount))
+                {
+                    throw new GameInitializationException("Er zijn meer rollen dan spelers!");
                 }
 
                 // EVERY DAY I'M SHUFFLING!
+                Game newGame = new Game(playerList.Items.Cast<String>().ToList(), roleList.Items.Cast<PlayerRoles>().ToList());
+
+                // Start the game already!
+                GameForm g = new GameForm(newGame);
+                g.Show(); 
+
 
             }
-            catch (Exception exc)
+            catch (GameInitializationException exc)
             {
-                alertBox(exc.Message);
+                alertBox(exc.StackTrace);
             }
         }
     }
 
-    class PlayerRoles
-    {
-        public static String ROLE_ANY_LEFT_LABEL = "(overige spelers)";
-        public static int ROLE_ANY_LEFT_AMOUNT = -1;
-
-        public String name;
-        public int amount;
-        public PlayerRoles(String role, String amount)
-        {
-            this.name = role;
-            if (ROLE_ANY_LEFT_LABEL.Equals(amount))
-            {
-                this.amount = ROLE_ANY_LEFT_AMOUNT;
-            }
-            else
-            {
-                this.amount = int.Parse(amount);
-            }
-        }
-
-        public bool isWildCardRole() {
-            return this.amount == ROLE_ANY_LEFT_AMOUNT;
-        }
-
-        public override string ToString() {
-            if (isWildCardRole())
-            {
-                return this.name + " " + ROLE_ANY_LEFT_LABEL;
-            }
-            else
-            {
-                return this.name + " (" + this.amount + ")";
-            }
-            
-        }
-    }
+  
 }

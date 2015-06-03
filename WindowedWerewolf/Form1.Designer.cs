@@ -1,6 +1,6 @@
 ﻿namespace WindowedWerewolf
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,6 @@
             this.playerName = new System.Windows.Forms.TextBox();
             this.deleteSelectedPlayer = new System.Windows.Forms.Button();
             this.deleteSelectedRoles = new System.Windows.Forms.Button();
-            this.roleName = new System.Windows.Forms.TextBox();
             this.roleList = new System.Windows.Forms.CheckedListBox();
             this.roleAmount = new System.Windows.Forms.ListBox();
             this.addRole = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.start = new System.Windows.Forms.Button();
+            this.roleName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // playerList
@@ -66,7 +66,7 @@
             // 
             this.playerName.Location = new System.Drawing.Point(13, 276);
             this.playerName.Name = "playerName";
-            this.playerName.Size = new System.Drawing.Size(118, 20);
+            this.playerName.Size = new System.Drawing.Size(188, 20);
             this.playerName.TabIndex = 2;
             // 
             // deleteSelectedPlayer
@@ -90,13 +90,6 @@
             this.deleteSelectedRoles.UseVisualStyleBackColor = true;
             this.deleteSelectedRoles.Click += new System.EventHandler(this.deleteSelectedRoles_Click);
             // 
-            // roleName
-            // 
-            this.roleName.Location = new System.Drawing.Point(207, 276);
-            this.roleName.Name = "roleName";
-            this.roleName.Size = new System.Drawing.Size(118, 20);
-            this.roleName.TabIndex = 5;
-            // 
             // roleList
             // 
             this.roleList.FormattingEnabled = true;
@@ -110,12 +103,12 @@
             this.roleAmount.FormattingEnabled = true;
             this.roleAmount.Location = new System.Drawing.Point(340, 276);
             this.roleAmount.Name = "roleAmount";
-            this.roleAmount.Size = new System.Drawing.Size(52, 69);
+            this.roleAmount.Size = new System.Drawing.Size(52, 43);
             this.roleAmount.TabIndex = 7;
             // 
             // addRole
             // 
-            this.addRole.Location = new System.Drawing.Point(207, 302);
+            this.addRole.Location = new System.Drawing.Point(207, 303);
             this.addRole.Name = "addRole";
             this.addRole.Size = new System.Drawing.Size(118, 23);
             this.addRole.TabIndex = 8;
@@ -160,11 +153,20 @@
             this.start.UseVisualStyleBackColor = true;
             this.start.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // roleName
+            // 
+            this.roleName.FormattingEnabled = true;
+            this.roleName.Location = new System.Drawing.Point(207, 276);
+            this.roleName.Name = "roleName";
+            this.roleName.Size = new System.Drawing.Size(118, 21);
+            this.roleName.TabIndex = 13;
+            // 
+            // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1124, 720);
+            this.ClientSize = new System.Drawing.Size(423, 514);
+            this.Controls.Add(this.roleName);
             this.Controls.Add(this.start);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -172,13 +174,12 @@
             this.Controls.Add(this.addRole);
             this.Controls.Add(this.roleAmount);
             this.Controls.Add(this.deleteSelectedRoles);
-            this.Controls.Add(this.roleName);
             this.Controls.Add(this.roleList);
             this.Controls.Add(this.deleteSelectedPlayer);
             this.Controls.Add(this.playerName);
             this.Controls.Add(this.addPlayer);
             this.Controls.Add(this.playerList);
-            this.Name = "Form1";
+            this.Name = "Menu";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -192,7 +193,6 @@
         private System.Windows.Forms.TextBox playerName;
         private System.Windows.Forms.Button deleteSelectedPlayer;
         private System.Windows.Forms.Button deleteSelectedRoles;
-        private System.Windows.Forms.TextBox roleName;
         private System.Windows.Forms.CheckedListBox roleList;
         private System.Windows.Forms.ListBox roleAmount;
         private System.Windows.Forms.Button addRole;
@@ -200,6 +200,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button start;
+        private System.Windows.Forms.ComboBox roleName;
     }
 }
 
