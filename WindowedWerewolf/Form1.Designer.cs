@@ -50,7 +50,7 @@
             this.playerList.Name = "playerList";
             this.playerList.Size = new System.Drawing.Size(188, 169);
             this.playerList.TabIndex = 0;
-            this.playerList.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            
             // 
             // addPlayer
             // 

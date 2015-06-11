@@ -23,11 +23,6 @@ namespace WindowedWerewolf
             playerList.Items.AddRange(defaultRoles);
         }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void addPlayer_Click(object sender, EventArgs e)
         {
             String name = playerName.Text.Trim();

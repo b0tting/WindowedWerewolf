@@ -31,13 +31,8 @@ namespace WindowedWerewolf
             shufflePlayers();
         }
 
-        
-
         private void shufflePlayers()
         {
-            
-            
-
             // Shuffle met een mooie lamba functie
             Random rnd = new Random();
             List<String> playersWorkArr = playerNames.OrderBy(item => rnd.Next()).ToList();
@@ -60,7 +55,11 @@ namespace WindowedWerewolf
                     playing.Add(player, wildCard.name);
                 }
             }
-
         }
+
+        public String getRole(String playerName) {
+            return this.playing[playerName];
+        }
+       
     }
 }
