@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,87 +14,133 @@ namespace WindowedWerewolf
 {
     public partial class GameForm : Form
     {
-        private int DEFAULT_LINES_BEFORE_RESIZING = 18;
+        private int DEFAULT_LINES_BEFORE_RESIZING = 15;
         private WerewolfButtons buttons;
         private bool showAll = true;
          
-        public GameForm(Game newGame)
+        public GameForm(Game newGame, Screen screen)
         {
             InitializeComponent();
-            goMaximized();
+            goMaximized(screen);
+            
             showPlayers(newGame);
             correctButtons();
+         
         }
 
         // Put screen (and form) to maximum size
-        private void goMaximized() {
+        private void goMaximized(Screen screen)
+        {
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;
-            this.Location = new Point(0, 0);
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.StartPosition = FormStartPosition.Manual; 
+            this.Location = screen.WorkingArea.Location;
+            // Customize the form.
+            this.Size = screen.Bounds.Size;
         }
 
         private void correctButtons()
         {
-            exitBox.Location = new Point(this.Width - 256, 0);
+            // 1/8 als spacer
+            int spacer = exitBox.Image.Size.Width / 8;
+            exitBox.Location = new Point(this.Width - exitBox.Image.Size.Width - spacer, spacer);
             exitBox.Click += new EventHandler(killForm);
-            shortShowImage.Location = new Point(this.Width - 256, 266);
+            shortShowImage.Location = new Point(this.Width - exitBox.Image.Size.Width - spacer, exitBox.Image.Size.Height + spacer + spacer);
             shortShowImage.MouseDown += new MouseEventHandler(roleShowAll);
+        }
+
+        private Image resizeImage(Image imgToResize, int newHeight)
+        {
+            Size current = imgToResize.Size;
+            Size newSize = new Size((current.Width * newHeight) / current.Height, newHeight);
+            return (Image)(new Bitmap(imgToResize, newSize));
         }
 
         private void showPlayers(Game game)
         {
             int height = this.Height;
-            int lineHeight = height / DEFAULT_LINES_BEFORE_RESIZING;
-            Font nameFont = new Font(new FontFamily("Verdana"), (lineHeight / 2));
-            buttons = new WerewolfButtons(game);
-            int currentHeight = 0;
 
-            // Create all relevant buttons
-            // Do gui stuff here, keep buttons and state in buttons object
-            int maxWidth = 0;
+            
+            int numberOfLines = game.PlayerNames.Count <= DEFAULT_LINES_BEFORE_RESIZING ?DEFAULT_LINES_BEFORE_RESIZING : game.PlayerNames.Count;
+
+            // Added factor to keep some black space at the bottom of the screen
+            int lineHeight = height / (numberOfLines + numberOfLines / 4);
+           
+            buttons = new WerewolfButtons(game);
+
+            // We start a tad lower as well
+            int currentHeight = lineHeight / 4;
+
+            // Init custom font
+            ResourceFontFetcher rff = new ResourceFontFetcher();
+            Font nameFont = new Font(rff.GetFontFromResource(global::WindowedWerewolf.Properties.Resources.Casper), (lineHeight / 2));
+
+            Image resizedRoleImage = resizeImage(global::WindowedWerewolf.Properties.Resources.weerwolven_role, lineHeight);
+            Image resizedPeekImage = resizeImage(global::WindowedWerewolf.Properties.Resources.weerwolven_peek, lineHeight);
+
+            int maxNameWidth = 0;
+            int maxRoleWidth = resizedRoleImage.Size.Width;
+
             foreach (String playerName in game.PlayerNames)
             {
-                Label newName = new Label { Location = new Point(13, currentHeight), AutoSize = true, Text = playerName, ForeColor = Color.White, Font = nameFont };
-                this.Controls.Add(newName);                
-                maxWidth = newName.Width > maxWidth ? newName.Width : maxWidth;
-                newName.MouseDown += new MouseEventHandler(roleShowFromName);
-                newName.MouseUp += new MouseEventHandler(roleHideFromName);
-
-                Label newRole = new Label { Location = new Point(50, currentHeight), AutoSize = true, Text = WerewolfGUIButton.HIDDEN_STRING, ForeColor = Color.White, Font = nameFont };
+                // Add a label for the player name
+                Label newName = new Label { Location = new Point(13, currentHeight), AutoSize = true, Text = playerName, ForeColor = Color.White, Font = nameFont, UseCompatibleTextRendering  = true};
+                this.Controls.Add(newName);
+                maxNameWidth = newName.Width > maxNameWidth ? newName.Width : maxNameWidth;
+                
+                // Add a label for the player role, but hide it as of yet
+                Label newRole = new Label { Location = new Point(50, currentHeight), AutoSize = true, Text = game.Playing[playerName], ForeColor = Color.White, Font = nameFont, UseCompatibleTextRendering =true};
                 this.Controls.Add(newRole);
-                newRole.Click += new EventHandler(roleClick);
+                maxRoleWidth = newRole.Width > maxRoleWidth ? newRole.Width : maxRoleWidth;
+                newRole.Hide();
 
-                buttons.Add(new WerewolfGUIButton(newName, newRole));
 
-                currentHeight += lineHeight;
+                // Add an image that people can click on to reveal the role permanently
+                WerewolfPictureBox roleImage = new WerewolfPictureBox { Location = new Point(50, currentHeight), AutoSize = true, Image = resizedRoleImage, Size = resizedRoleImage.Size };
+                roleImage.playerName = playerName;
+                this.Controls.Add(roleImage);
+                roleImage.Click += new EventHandler(roleClick);
+
+                // Add an image that people can click on to get a quick peek
+                WerewolfPictureBox peekImage = new WerewolfPictureBox { Location = new Point(600, currentHeight), AutoSize = true, Image = resizedPeekImage, Size = resizedRoleImage.Size };
+                peekImage.playerName = playerName;
+                peekImage.MouseDown += new MouseEventHandler(roleShowFromName);
+                peekImage.MouseUp += new MouseEventHandler(roleHideFromName);
+                this.Controls.Add(peekImage);
+
+                buttons.Add(new WerewolfGUIButton(newName, newRole, roleImage, peekImage));
+
+                currentHeight += lineHeight + (lineHeight / 4);
             }
 
             // Now that we know the width, set buttons to correct location and add to screen
-            foreach(WerewolfGUIButton button in buttons.getButtons()) { 
-               button.getRoleLabel().Location = new Point(maxWidth + 50, button.getRoleLabel().Location.Y);
+            int spacer = maxNameWidth / 7;
+            maxNameWidth = maxNameWidth + spacer;
+            maxRoleWidth = maxNameWidth + spacer + maxRoleWidth;
+            foreach(WerewolfGUIButton button in buttons.getButtons()) {
+                button.getRoleLabel().Location = new Point(maxNameWidth, button.getRoleLabel().Location.Y);
+                button.getRoleImage().Location = new Point(maxNameWidth, button.getRoleImage().Location.Y);
+                button.getPeekImage().Location = new Point(maxRoleWidth, button.getRoleImage().Location.Y);
             }
             
         }
 
         private void roleShowFromName(Object sender, EventArgs e)
         {
-            Label nameLabel = (Label)sender;
-            buttons.showPlayerRole(nameLabel.Text);
+            WerewolfPictureBox peekImage = (WerewolfPictureBox)sender;
+            buttons.showPlayerRole(peekImage.playerName);
         }
 
         private void roleHideFromName(Object sender, EventArgs e)
         {
-            Label nameLabel = (Label)sender;
-            buttons.hidePlayerRole(nameLabel.Text);
+            WerewolfPictureBox peekImage = (WerewolfPictureBox)sender;
+            buttons.hidePlayerRole(peekImage.playerName);
         }
 
 
         private void roleClick(Object sender, EventArgs e)
         {
-            Label roleLabel = (Label)sender;
-            String name = buttons.findNameForRoleLabel(roleLabel);
-            buttons.showPlayerRole(name, true);
+            WerewolfPictureBox roleImage = (WerewolfPictureBox)sender;
+            buttons.showPlayerRole(roleImage.playerName, true);
         }
 
         private void killForm(object sender, EventArgs e)
@@ -140,17 +188,24 @@ namespace WindowedWerewolf
             }
 
             public void showPlayerRole(String playerName, bool reveal = false) {
-                   Label roleLabel = nameButtonMap[playerName].getRoleLabel();
-                   roleLabel.Text = game.getRole(playerName);
+                   WerewolfGUIButton button = nameButtonMap[playerName];
+                   if (button.getRoleImage().Visible)
+                   {
+                       button.getRoleImage().Hide();
+                       button.getRoleLabel().Show();
+                   }
                    if(reveal) {
-                       nameButtonMap[playerName].Revealed = true;
+                       button.Revealed = true;
+                       button.getPeekImage().Hide();
                    }
             }
 
             public void hidePlayerRole(String playerName) {
                 WerewolfGUIButton button = nameButtonMap[playerName];
-                if(!button.Revealed) {
-                    button.getRoleLabel().Text = WerewolfGUIButton.HIDDEN_STRING;
+                if (!button.getRoleImage().Visible && !button.Revealed)
+                {
+                    button.getRoleImage().Show();
+                    button.getRoleLabel().Hide();
                 }
             }
 
@@ -173,7 +228,8 @@ namespace WindowedWerewolf
         private class WerewolfGUIButton {
             private Label playerLabel;
             private Label roleLabel;
-            public static String HIDDEN_STRING = "???";
+            private PictureBox roleImage;
+            private PictureBox peekImage;
 
             private bool revealed;
 
@@ -183,10 +239,12 @@ namespace WindowedWerewolf
               set { revealed = value; }
             }
 
-            public WerewolfGUIButton(Label playerLabel, Label roleLabel)
+            public WerewolfGUIButton(Label playerLabel, Label roleLabel, PictureBox roleImage, PictureBox peekImage)
             {
                 this.playerLabel = playerLabel;
                 this.roleLabel = roleLabel;
+                this.roleImage = roleImage;
+                this.peekImage = peekImage;
             }
                 
             public Label getPlayerLabel() {
@@ -198,9 +256,20 @@ namespace WindowedWerewolf
                 return roleLabel;
             }
 
+            public PictureBox getRoleImage()
+            {
+                return roleImage;
+            }
 
+            public PictureBox getPeekImage()
+            {
+                return peekImage;
+            }
+        }
 
-
+        private class WerewolfPictureBox : PictureBox
+        {
+            public String playerName;
         }
     }
 }

@@ -63,9 +63,29 @@ namespace WindowedWerewolf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Holidays_Werewolf_icon {
+        internal static System.Drawing.Bitmap banner {
             get {
-                object obj = ResourceManager.GetObject("Holidays-Werewolf-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Casper {
+            get {
+                object obj = ResourceManager.GetObject("Casper", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap weerwolven_peek {
+            get {
+                object obj = ResourceManager.GetObject("weerwolven_peek", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +93,9 @@ namespace WindowedWerewolf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Holidays_Werewolf_icon1 {
+        internal static System.Drawing.Bitmap weerwolven_quit {
             get {
-                object obj = ResourceManager.GetObject("Holidays-Werewolf-icon1", resourceCulture);
+                object obj = ResourceManager.GetObject("weerwolven_quit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +103,9 @@ namespace WindowedWerewolf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tomb {
+        internal static System.Drawing.Bitmap weerwolven_role {
             get {
-                object obj = ResourceManager.GetObject("Tomb", resourceCulture);
+                object obj = ResourceManager.GetObject("weerwolven_role", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +113,9 @@ namespace WindowedWerewolf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Werewolf_icon {
+        internal static System.Drawing.Bitmap weerwolven_showall {
             get {
-                object obj = ResourceManager.GetObject("Werewolf-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("weerwolven_showall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

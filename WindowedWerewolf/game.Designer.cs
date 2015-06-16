@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.exitBox = new System.Windows.Forms.PictureBox();
             this.shortShowImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
@@ -37,7 +36,7 @@
             // 
             // exitBox
             // 
-            this.exitBox.Image = ((System.Drawing.Image)(resources.GetObject("exitBox.Image")));
+            this.exitBox.Image = global::WindowedWerewolf.Properties.Resources.weerwolven_quit;
             this.exitBox.Location = new System.Drawing.Point(63, 110);
             this.exitBox.Name = "exitBox";
             this.exitBox.Size = new System.Drawing.Size(256, 256);
@@ -46,11 +45,11 @@
             // 
             // shortShowImage
             // 
-            this.shortShowImage.Image = global::WindowedWerewolf.Properties.Resources.Holidays_Werewolf_icon1;
-            this.shortShowImage.Location = new System.Drawing.Point(814, 408);
+            this.shortShowImage.Image = global::WindowedWerewolf.Properties.Resources.weerwolven_showall;
+            this.shortShowImage.Location = new System.Drawing.Point(0, 0);
             this.shortShowImage.Name = "shortShowImage";
             this.shortShowImage.Size = new System.Drawing.Size(256, 256);
-            this.shortShowImage.TabIndex = 2;
+            this.shortShowImage.TabIndex = 0;
             this.shortShowImage.TabStop = false;
             // 
             // GameForm

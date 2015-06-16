@@ -13,11 +13,20 @@ namespace WindowedWerewolf
     public partial class Menu : Form
     {
         private PlayerRoles[] defaultRoleList = new PlayerRoles[] { new PlayerRoles("Burger", PlayerRoles.ROLE_ANY_LEFT_LABEL), new PlayerRoles("Zieneres", "1"), new PlayerRoles("Weerwolf", "2")};
-        private String[] defaultRoles = new String[] { "Barry", "Ziona", "Willem", "Harry", "Heroen", "Dirk" };
+        private String[] defaultRoles = new String[] { "Barry", "Ziona", "Willem", "Harry", "Heroen", "Dirk", "Barre1", "Ziona1", "Willem1", "Harry1", "Heroen1", "Dirk1", "Barry2", "Ziona2", "Willem2", "Harry2", "Heroen2", "Dirk2" };
         public Menu()
         {
             InitializeComponent();
-            roleAmount.Items.AddRange(new String[] { PlayerRoles.ROLE_ANY_LEFT_LABEL, "1", "2", "3", "4", "5"});
+            roleAmount.Items.AddRange(new String[] { PlayerRoles.ROLE_ANY_LEFT_LABEL, "1", "2", "3", "4", "5", "6", "7"});
+
+            Screen nuScreen = Screen.FromControl(this);
+            foreach(Screen screen in Screen.AllScreens) {
+                screenSelect.Items.Add(new ComboBoxScreenItem(screen.DeviceName, screen));
+                if (screen.Equals(nuScreen))
+                {
+                    screenSelect.SelectedIndex = screenSelect.Items.Count - 1;
+                }
+            }
             roleList.Items.AddRange(defaultRoleList);
             roleName.Items.AddRange(defaultRoles);
             playerList.Items.AddRange(defaultRoles);
@@ -137,7 +146,7 @@ namespace WindowedWerewolf
                 Game newGame = new Game(playerList.Items.Cast<String>().ToList(), roleList.Items.Cast<PlayerRoles>().ToList());
 
                 // Start the game already!
-                GameForm g = new GameForm(newGame);
+                GameForm g = new GameForm(newGame, ((ComboBoxScreenItem)(screenSelect.SelectedItem)).screenVal);
                 g.Show(); 
 
 
@@ -145,6 +154,33 @@ namespace WindowedWerewolf
             catch (GameInitializationException exc)
             {
                 alertBox(exc.StackTrace);
+            }
+        }
+
+        private void roleAmount_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Spelerlijst_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private class ComboBoxScreenItem
+        {
+            public String textVal;
+            public Screen screenVal;
+
+            public ComboBoxScreenItem(String textVal, Screen screenVal)
+            {
+                this.textVal = textVal;
+                this.screenVal = screenVal;
+            }
+
+            public override string ToString()
+            {
+                return textVal;
             }
         }
     }
