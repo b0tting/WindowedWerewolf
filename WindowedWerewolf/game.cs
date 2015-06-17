@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,6 +37,10 @@ namespace WindowedWerewolf
             this.Location = screen.WorkingArea.Location;
             // Customize the form.
             this.Size = screen.Bounds.Size;
+            Assembly asm = Assembly.GetExecutingAssembly();
+            Bitmap backgroundImage = new Bitmap(asm.GetManifestResourceStream("WindowedWerewolf.Resources.banner.jpg"));
+            this.BackgroundImage = backgroundImage;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void correctButtons()
@@ -44,7 +49,9 @@ namespace WindowedWerewolf
             int spacer = exitBox.Image.Size.Width / 8;
             exitBox.Location = new Point(this.Width - exitBox.Image.Size.Width - spacer, spacer);
             exitBox.Click += new EventHandler(killForm);
+            exitBox.BackColor = Color.Transparent;
             shortShowImage.Location = new Point(this.Width - exitBox.Image.Size.Width - spacer, exitBox.Image.Size.Height + spacer + spacer);
+            shortShowImage.BackColor = Color.Transparent;
             shortShowImage.MouseDown += new MouseEventHandler(roleShowAll);
         }
 
@@ -83,25 +90,25 @@ namespace WindowedWerewolf
             foreach (String playerName in game.PlayerNames)
             {
                 // Add a label for the player name
-                Label newName = new Label { Location = new Point(13, currentHeight), AutoSize = true, Text = playerName, ForeColor = Color.White, Font = nameFont, UseCompatibleTextRendering  = true};
+                Label newName = new Label { Location = new Point(13, currentHeight), AutoSize = true, BackColor = Color.Transparent, Text = playerName, ForeColor = Color.White, Font = nameFont, UseCompatibleTextRendering  = true};
                 this.Controls.Add(newName);
                 maxNameWidth = newName.Width > maxNameWidth ? newName.Width : maxNameWidth;
                 
                 // Add a label for the player role, but hide it as of yet
-                Label newRole = new Label { Location = new Point(50, currentHeight), AutoSize = true, Text = game.Playing[playerName], ForeColor = Color.White, Font = nameFont, UseCompatibleTextRendering =true};
+                Label newRole = new Label { Location = new Point(50, currentHeight), AutoSize = true, BackColor = Color.Transparent, Text = game.Playing[playerName], ForeColor = Color.White, Font = nameFont, UseCompatibleTextRendering = true };
                 this.Controls.Add(newRole);
                 maxRoleWidth = newRole.Width > maxRoleWidth ? newRole.Width : maxRoleWidth;
                 newRole.Hide();
 
 
                 // Add an image that people can click on to reveal the role permanently
-                WerewolfPictureBox roleImage = new WerewolfPictureBox { Location = new Point(50, currentHeight), AutoSize = true, Image = resizedRoleImage, Size = resizedRoleImage.Size };
+                WerewolfPictureBox roleImage = new WerewolfPictureBox { Location = new Point(50, currentHeight), BackColor = Color.Transparent, AutoSize = true, Image = resizedRoleImage, Size = resizedRoleImage.Size };
                 roleImage.playerName = playerName;
                 this.Controls.Add(roleImage);
                 roleImage.Click += new EventHandler(roleClick);
 
                 // Add an image that people can click on to get a quick peek
-                WerewolfPictureBox peekImage = new WerewolfPictureBox { Location = new Point(600, currentHeight), AutoSize = true, Image = resizedPeekImage, Size = resizedRoleImage.Size };
+                WerewolfPictureBox peekImage = new WerewolfPictureBox { Location = new Point(600, currentHeight), BackColor = Color.Transparent, AutoSize = true, Image = resizedPeekImage, Size = resizedRoleImage.Size };
                 peekImage.playerName = playerName;
                 peekImage.MouseDown += new MouseEventHandler(roleShowFromName);
                 peekImage.MouseUp += new MouseEventHandler(roleHideFromName);

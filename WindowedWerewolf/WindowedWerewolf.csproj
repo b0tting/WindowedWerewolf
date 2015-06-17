@@ -120,22 +120,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\Casper.ttf" />
+    <None Include="Resources\Ravenscroft.ttf" />
     <None Include="WindowedWerewolf_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Werewolf-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Tomb.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Holidays-Werewolf-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Holidays-Werewolf-icon1.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -170,13 +159,10 @@
     <None Include="Resources\weerwolven_showall.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Casper.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\weerwolven_role_long.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\banner.jpg" />
+    <EmbeddedResource Include="Resources\banner.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,7 +13,7 @@ namespace WindowedWerewolf
     public partial class Menu : Form
     {
         private PlayerRoles[] defaultRoleList = new PlayerRoles[] { new PlayerRoles("Burger", PlayerRoles.ROLE_ANY_LEFT_LABEL), new PlayerRoles("Zieneres", "1"), new PlayerRoles("Weerwolf", "2")};
-        private String[] defaultRoles = new String[] { "Barry", "Ziona", "Willem", "Harry", "Heroen", "Dirk", "Barre1", "Ziona1", "Willem1", "Harry1", "Heroen1", "Dirk1", "Barry2", "Ziona2", "Willem2", "Harry2", "Heroen2", "Dirk2" };
+        private String[] defaultRoles = new String[] { "Barry", "Ziona", "Willem", "Harry", "Heroen", "Dirk"};
         public Menu()
         {
             InitializeComponent();
