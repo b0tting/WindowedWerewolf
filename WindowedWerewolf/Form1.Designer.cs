@@ -47,13 +47,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.screenSelect = new System.Windows.Forms.ComboBox();
+            this.contrastMode = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // playerList
             // 
-            resources.ApplyResources(this.playerList, "playerList");
             this.playerList.FormattingEnabled = true;
+            resources.ApplyResources(this.playerList, "playerList");
             this.playerList.Name = "playerList";
             // 
             // addPlayer
@@ -70,8 +71,8 @@
             // 
             // deleteSelectedPlayer
             // 
-            resources.ApplyResources(this.deleteSelectedPlayer, "deleteSelectedPlayer");
             this.deleteSelectedPlayer.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.deleteSelectedPlayer, "deleteSelectedPlayer");
             this.deleteSelectedPlayer.Name = "deleteSelectedPlayer";
             this.deleteSelectedPlayer.UseVisualStyleBackColor = false;
             this.deleteSelectedPlayer.Click += new System.EventHandler(this.deleteSelectedPlayer_Click);
@@ -85,8 +86,8 @@
             // 
             // roleList
             // 
-            resources.ApplyResources(this.roleList, "roleList");
             this.roleList.FormattingEnabled = true;
+            resources.ApplyResources(this.roleList, "roleList");
             this.roleList.Name = "roleList";
             // 
             // addRole
@@ -120,28 +121,29 @@
             // 
             // roleName
             // 
-            resources.ApplyResources(this.roleName, "roleName");
             this.roleName.FormattingEnabled = true;
+            resources.ApplyResources(this.roleName, "roleName");
             this.roleName.Name = "roleName";
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::WindowedWerewolf.Properties.Resources.banner;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // roleAmount
             // 
-            resources.ApplyResources(this.roleAmount, "roleAmount");
             this.roleAmount.FormattingEnabled = true;
+            resources.ApplyResources(this.roleAmount, "roleAmount");
             this.roleAmount.Name = "roleAmount";
             // 
             // Spelerlijst
             // 
             resources.ApplyResources(this.Spelerlijst, "Spelerlijst");
             this.Spelerlijst.Name = "Spelerlijst";
-            this.Spelerlijst.Click += new System.EventHandler(this.Spelerlijst_Click);
+
             // 
             // label4
             // 
@@ -155,15 +157,22 @@
             // 
             // screenSelect
             // 
-            resources.ApplyResources(this.screenSelect, "screenSelect");
             this.screenSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.screenSelect.FormattingEnabled = true;
+            resources.ApplyResources(this.screenSelect, "screenSelect");
             this.screenSelect.Name = "screenSelect";
+            // 
+            // contrastMode
+            // 
+            resources.ApplyResources(this.contrastMode, "contrastMode");
+            this.contrastMode.Name = "contrastMode";
+            this.contrastMode.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.contrastMode);
             this.Controls.Add(this.screenSelect);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -209,6 +218,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox screenSelect;
+        private System.Windows.Forms.CheckBox contrastMode;
     }
 }
 

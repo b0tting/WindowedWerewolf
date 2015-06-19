@@ -27,11 +27,6 @@ namespace WindowedWerewolf
         public System.Drawing.FontFamily GetFontFromResource(byte[] fontResource)
         {
             var assembly = Assembly.GetExecutingAssembly();
-
-            foreach (var resourceName in assembly.GetManifestResourceNames()) {
-                    Debug.WriteLine(resourceName);
-            }
-
             IntPtr ptr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontResource.Length);
             //copy the font data byte array to memory
             System.Runtime.InteropServices.Marshal.Copy(fontResource, 0, ptr, fontResource.Length);

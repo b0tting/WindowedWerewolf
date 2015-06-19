@@ -146,7 +146,7 @@ namespace WindowedWerewolf
                 Game newGame = new Game(playerList.Items.Cast<String>().ToList(), roleList.Items.Cast<PlayerRoles>().ToList());
 
                 // Start the game already!
-                GameForm g = new GameForm(newGame, ((ComboBoxScreenItem)(screenSelect.SelectedItem)).screenVal);
+                GameForm g = new GameForm(newGame, ((ComboBoxScreenItem)(screenSelect.SelectedItem)).screenVal, contrastMode.Checked);
                 g.Show(); 
 
 
@@ -155,16 +155,6 @@ namespace WindowedWerewolf
             {
                 alertBox(exc.StackTrace);
             }
-        }
-
-        private void roleAmount_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Spelerlijst_Click(object sender, EventArgs e)
-        {
-
         }
 
         private class ComboBoxScreenItem
@@ -182,6 +172,11 @@ namespace WindowedWerewolf
             {
                 return textVal;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -18,11 +18,13 @@ namespace WindowedWerewolf
         private int DEFAULT_LINES_BEFORE_RESIZING = 15;
         private WerewolfButtons buttons;
         private bool showAll = true;
+        private bool contrastMode = false;
          
-        public GameForm(Game newGame, Screen screen)
+        public GameForm(Game newGame, Screen screen, bool contrastMode)
         {
+            this.contrastMode = contrastMode;
             InitializeComponent();
-            goMaximized(screen);
+            goMaximized(screen, contrastMode);
             
             showPlayers(newGame);
             correctButtons();
@@ -30,17 +32,20 @@ namespace WindowedWerewolf
         }
 
         // Put screen (and form) to maximum size
-        private void goMaximized(Screen screen)
+        private void goMaximized(Screen screen, bool contrastMode)
         {
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.StartPosition = FormStartPosition.Manual; 
             this.Location = screen.WorkingArea.Location;
             // Customize the form.
             this.Size = screen.Bounds.Size;
-            Assembly asm = Assembly.GetExecutingAssembly();
-            Bitmap backgroundImage = new Bitmap(asm.GetManifestResourceStream("WindowedWerewolf.Resources.banner.jpg"));
-            this.BackgroundImage = backgroundImage;
-            this.BackgroundImageLayout = ImageLayout.Stretch;
+            if (!contrastMode)
+            {
+                Assembly asm = Assembly.GetExecutingAssembly();
+                Bitmap backgroundImage = new Bitmap(asm.GetManifestResourceStream("WindowedWerewolf.Resources.banner.jpg"));
+                this.BackgroundImage = backgroundImage;
+                this.BackgroundImageLayout = ImageLayout.Stretch;
+            }
         }
 
         private void correctButtons()

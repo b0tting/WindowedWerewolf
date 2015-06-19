@@ -118,473 +118,479 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="roleList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 199</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>637, 302</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;roleList.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="addPlayer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 617</value>
-  </data>
-  <data name="&gt;&gt;addRole.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="addRole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 617</value>
-  </data>
-  <data name="Spelerlijst.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;start.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="start.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;deleteSelectedRoles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="playerList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 336</value>
   </data>
   <data name="playerList.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 199</value>
   </data>
-  <data name="&gt;&gt;roleName.Name" xml:space="preserve">
-    <value>roleName</value>
-  </data>
-  <data name="&gt;&gt;addPlayer.Name" xml:space="preserve">
-    <value>addPlayer</value>
-  </data>
-  <data name="&gt;&gt;playerName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Weerwolven in Duister Delft</value>
-  </data>
-  <data name="roleName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 590</value>
-  </data>
-  <data name="deleteSelectedRoles.Text" xml:space="preserve">
-    <value>Verwijder</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;roleAmount.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="addPlayer.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Spelerlijst.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;start.Name" xml:space="preserve">
-    <value>start</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Aantal</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Schermkeuze</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;roleAmount.Name" xml:space="preserve">
-    <value>roleAmount</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="roleAmount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 590</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="screenSelect.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="start.Size" type="System.Drawing.Size, System.Drawing">
-    <value>559, 54</value>
-  </data>
-  <data name="&gt;&gt;roleName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;playerName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deleteSelectedPlayer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;roleName.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="roleList.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;playerName.Name" xml:space="preserve">
-    <value>playerName</value>
-  </data>
-  <data name="playerList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 336</value>
-  </data>
-  <data name="&gt;&gt;roleAmount.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;addPlayer.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="addPlayer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 23</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="playerList.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="deleteSelectedPlayer.Text" xml:space="preserve">
-    <value>Verwijder</value>
-  </data>
-  <data name="deleteSelectedRoles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 541</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 574</value>
-  </data>
-  <data name="roleAmount.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;screenSelect.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;playerList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="deleteSelectedPlayer.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;roleAmount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Spelerlijst.Name" xml:space="preserve">
-    <value>Spelerlijst</value>
-  </data>
-  <data name="playerName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 591</value>
-  </data>
-  <data name="&gt;&gt;addPlayer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="playerName.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;screenSelect.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="addRole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 23</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 13</value>
-  </data>
-  <data name="&gt;&gt;roleName.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="deleteSelectedPlayer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 541</value>
-  </data>
-  <data name="&gt;&gt;deleteSelectedPlayer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 656</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="start.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 680</value>
-  </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="roleName.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;roleList.Name" xml:space="preserve">
-    <value>roleList</value>
-  </data>
-  <data name="&gt;&gt;start.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;playerList.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="deleteSelectedRoles.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 317</value>
-  </data>
-  <data name="roleAmount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 21</value>
-  </data>
-  <data name="&gt;&gt;deleteSelectedRoles.Name" xml:space="preserve">
-    <value>deleteSelectedRoles</value>
-  </data>
-  <data name="playerName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 20</value>
-  </data>
-  <data name="screenSelect.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 653</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>494, 574</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 653</value>
-  </data>
-  <data name="Spelerlijst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 317</value>
   </data>
   <data name="&gt;&gt;playerList.Name" xml:space="preserve">
     <value>playerList</value>
   </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 21</value>
+  <data name="&gt;&gt;playerList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;roleList.Parent" xml:space="preserve">
+  <data name="&gt;&gt;playerList.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;addRole.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;playerList.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="addPlayer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 617</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="deleteSelectedRoles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 23</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Rol</value>
-  </data>
-  <data name="&gt;&gt;addRole.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;screenSelect.Name" xml:space="preserve">
-    <value>screenSelect</value>
-  </data>
-  <data name="&gt;&gt;deleteSelectedRoles.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Spelerlijst.Text" xml:space="preserve">
-    <value>Spelerlijst</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Spelerlijst.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 13</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="start.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Speler </value>
-  </data>
-  <data name="&gt;&gt;deleteSelectedPlayer.Name" xml:space="preserve">
-    <value>deleteSelectedPlayer</value>
-  </data>
-  <data name="Spelerlijst.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 13</value>
-  </data>
-  <data name="addRole.Text" xml:space="preserve">
-    <value>Voeg rol toe</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="deleteSelectedPlayer.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="addPlayer.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 23</value>
   </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-11, -2</value>
-  </data>
-  <data name="&gt;&gt;addRole.Name" xml:space="preserve">
-    <value>addRole</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;start.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="addPlayer.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="addPlayer.Text" xml:space="preserve">
     <value>Voeg speler toe</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 574</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>580, 738</value>
-  </data>
-  <data name="&gt;&gt;roleList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deleteSelectedPlayer.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;Spelerlijst.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="roleList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 336</value>
-  </data>
-  <data name="&gt;&gt;Spelerlijst.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;addPlayer.Name" xml:space="preserve">
+    <value>addPlayer</value>
   </data>
   <data name="&gt;&gt;addPlayer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;addPlayer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addPlayer.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="playerName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 591</value>
+  </data>
+  <data name="playerName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 20</value>
+  </data>
+  <data name="playerName.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;playerName.Name" xml:space="preserve">
+    <value>playerName</value>
+  </data>
+  <data name="&gt;&gt;playerName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playerName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;playerName.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="deleteSelectedPlayer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 541</value>
+  </data>
+  <data name="deleteSelectedPlayer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 23</value>
+  </data>
+  <data name="deleteSelectedPlayer.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="deleteSelectedPlayer.Text" xml:space="preserve">
+    <value>Verwijder</value>
+  </data>
+  <data name="&gt;&gt;deleteSelectedPlayer.Name" xml:space="preserve">
+    <value>deleteSelectedPlayer</value>
+  </data>
+  <data name="&gt;&gt;deleteSelectedPlayer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteSelectedPlayer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;deleteSelectedPlayer.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="deleteSelectedRoles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 541</value>
+  </data>
+  <data name="deleteSelectedRoles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 23</value>
+  </data>
+  <data name="deleteSelectedRoles.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="deleteSelectedRoles.Text" xml:space="preserve">
+    <value>Verwijder</value>
+  </data>
+  <data name="&gt;&gt;deleteSelectedRoles.Name" xml:space="preserve">
+    <value>deleteSelectedRoles</value>
+  </data>
+  <data name="&gt;&gt;deleteSelectedRoles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteSelectedRoles.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;deleteSelectedRoles.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="roleList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 336</value>
+  </data>
+  <data name="roleList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 199</value>
+  </data>
+  <data name="roleList.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;roleList.Name" xml:space="preserve">
+    <value>roleList</value>
+  </data>
+  <data name="&gt;&gt;roleList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;roleList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;roleList.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="addRole.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 617</value>
+  </data>
+  <data name="addRole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 23</value>
+  </data>
+  <data name="addRole.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="addRole.Text" xml:space="preserve">
+    <value>Voeg rol toe</value>
+  </data>
+  <data name="&gt;&gt;addRole.Name" xml:space="preserve">
+    <value>addRole</value>
+  </data>
+  <data name="&gt;&gt;addRole.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addRole.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addRole.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="addRole.TabIndex" type="System.Int32, mscorlib">
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 574</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Speler </value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 574</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>494, 574</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Aantal</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="start.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 680</value>
+  </data>
+  <data name="start.Size" type="System.Drawing.Size, System.Drawing">
+    <value>559, 54</value>
+  </data>
+  <data name="start.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="start.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;start.Name" xml:space="preserve">
+    <value>start</value>
+  </data>
+  <data name="&gt;&gt;start.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;start.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;start.ZOrder" xml:space="preserve">
     <value>8</value>
+  </data>
+  <data name="roleName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 590</value>
   </data>
   <data name="roleName.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 21</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Menu</value>
+  <data name="roleName.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;playerName.ZOrder" xml:space="preserve">
-    <value>15</value>
+  <data name="&gt;&gt;roleName.Name" xml:space="preserve">
+    <value>roleName</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 13</value>
+  <data name="&gt;&gt;roleName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;roleName.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;roleName.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-11, -2</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>637, 302</value>
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;screenSelect.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="roleAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>497, 590</value>
+  </data>
+  <data name="roleAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 21</value>
+  </data>
+  <data name="roleAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;roleAmount.Name" xml:space="preserve">
+    <value>roleAmount</value>
+  </data>
+  <data name="&gt;&gt;roleAmount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;roleAmount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;roleAmount.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Spelerlijst.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Spelerlijst.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 317</value>
+  </data>
+  <data name="Spelerlijst.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="Spelerlijst.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="Spelerlijst.Text" xml:space="preserve">
+    <value>Spelerlijst</value>
+  </data>
+  <data name="&gt;&gt;Spelerlijst.Name" xml:space="preserve">
+    <value>Spelerlijst</value>
+  </data>
+  <data name="&gt;&gt;Spelerlijst.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Spelerlijst.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Spelerlijst.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 317</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 13</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Rollen lijst</value>
   </data>
-  <data name="&gt;&gt;playerList.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 656</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Schermkeuze</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="screenSelect.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 653</value>
+  </data>
+  <data name="screenSelect.Size" type="System.Drawing.Size, System.Drawing">
+    <value>357, 21</value>
+  </data>
+  <data name="screenSelect.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;screenSelect.Name" xml:space="preserve">
+    <value>screenSelect</value>
+  </data>
+  <data name="&gt;&gt;screenSelect.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;screenSelect.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;screenSelect.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="contrastMode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="contrastMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>468, 657</value>
+  </data>
+  <data name="contrastMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 17</value>
+  </data>
+  <data name="contrastMode.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="contrastMode.Text" xml:space="preserve">
+    <value>Contrast modus</value>
+  </data>
+  <data name="&gt;&gt;contrastMode.Name" xml:space="preserve">
+    <value>contrastMode</value>
+  </data>
+  <data name="&gt;&gt;contrastMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;contrastMode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;contrastMode.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>sq</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>580, 738</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Weerwolven in Duister Delft</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
