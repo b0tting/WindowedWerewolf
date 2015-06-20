@@ -68,6 +68,7 @@
             // 
             resources.ApplyResources(this.playerName, "playerName");
             this.playerName.Name = "playerName";
+            this.playerName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addPlayerKeyDown);
             // 
             // deleteSelectedPlayer
             // 
@@ -124,6 +125,7 @@
             this.roleName.FormattingEnabled = true;
             resources.ApplyResources(this.roleName, "roleName");
             this.roleName.Name = "roleName";
+            this.roleName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addRoleKeyDown);
             // 
             // pictureBox1
             // 
@@ -143,7 +145,6 @@
             // 
             resources.ApplyResources(this.Spelerlijst, "Spelerlijst");
             this.Spelerlijst.Name = "Spelerlijst";
-
             // 
             // label4
             // 

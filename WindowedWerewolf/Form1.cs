@@ -18,6 +18,7 @@ namespace WindowedWerewolf
         {
             InitializeComponent();
             roleAmount.Items.AddRange(new String[] { PlayerRoles.ROLE_ANY_LEFT_LABEL, "1", "2", "3", "4", "5", "6", "7"});
+            roleAmount.SelectedIndex = 1;
 
             Screen nuScreen = Screen.FromControl(this);
             foreach(Screen screen in Screen.AllScreens) {
@@ -178,6 +179,23 @@ namespace WindowedWerewolf
         {
 
         }
+
+        private void addPlayerKeyDown(object sender, KeyEventArgs  e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                addPlayer_Click(sender, e);
+            }
+        }
+
+        private void addRoleKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                addRole_Click(sender, e);
+            }
+        }
+
     }
 
   
