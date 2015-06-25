@@ -126,6 +126,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\Casper.ttf" />
+    <None Include="Resources\Kirvy-Bold.otf" />
+    <None Include="Resources\Kirvy-Bold.ttf" />
+    <None Include="Resources\Kirvy-Regular.ttf" />
     <None Include="Resources\Ravenscroft.ttf" />
     <None Include="WindowedWerewolf_TemporaryKey.pfx" />
   </ItemGroup>

@@ -24,15 +24,15 @@ namespace WindowedWerewolf
         {
             this.contrastMode = contrastMode;
             InitializeComponent();
-            goMaximized(screen, contrastMode);
+            setupCanvas(screen, contrastMode);
             
-            showPlayers(newGame);
+            showPlayers(newGame, contrastMode);
             correctButtons();
          
         }
 
         // Put screen (and form) to maximum size
-        private void goMaximized(Screen screen, bool contrastMode)
+        private void setupCanvas(Screen screen, bool contrastMode)
         {
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.StartPosition = FormStartPosition.Manual; 
@@ -67,7 +67,7 @@ namespace WindowedWerewolf
             return (Image)(new Bitmap(imgToResize, newSize));
         }
 
-        private void showPlayers(Game game)
+        private void showPlayers(Game game, bool contrastMode)
         {
             int height = this.Height;
 
@@ -84,8 +84,9 @@ namespace WindowedWerewolf
 
             // Init custom font
             ResourceFontFetcher rff = new ResourceFontFetcher();
-            Font nameFont = new Font(rff.GetFontFromResource(global::WindowedWerewolf.Properties.Resources.Casper), (lineHeight / 2));
-
+            FontFamily ff = contrastMode ? rff.GetFontFromResource(global::WindowedWerewolf.Properties.Resources.Kirvy) : rff.GetFontFromResource(global::WindowedWerewolf.Properties.Resources.Casper);
+            Font nameFont = new Font(ff, (lineHeight / 2));
+             
             Image resizedRoleImage = resizeImage(global::WindowedWerewolf.Properties.Resources.weerwolven_role, lineHeight);
             Image resizedPeekImage = resizeImage(global::WindowedWerewolf.Properties.Resources.weerwolven_peek, lineHeight);
 

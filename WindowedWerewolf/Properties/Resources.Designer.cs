@@ -93,6 +93,16 @@ namespace WindowedWerewolf.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] Kirvy {
+            get {
+                object obj = ResourceManager.GetObject("Kirvy", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Ravenscroft {
             get {
                 object obj = ResourceManager.GetObject("Ravenscroft", resourceCulture);
