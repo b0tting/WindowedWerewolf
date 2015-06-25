@@ -4,9 +4,9 @@ A C# version of the Mafia / Wakkerdam game. Add players and roles on a configura
 ![Alt text](https://github.com/b0tting/WindowedWerewolf/blob/master/screenshots/weerwolf_configure.PNG "Configure menu")
 
 ## Features
-- You can select the display for the actual game display. Suggested use case is to configure on a laptop screen, then display the game on a projector. 
+- You can select the display for the actual game display. Suggested use case is to configure on a laptop screen, then display the game on a projector. There's a special contrast mode for projectors. 
 - Roles are freeform, ie. the game has no actual notion on what a Werewolf / Mafia member is. 
-- Configuration is saved between games, but shuffle order is not. 
+- Configuration is kept between games.
 
 ![Alt text](https://github.com/b0tting/WindowedWerewolf/blob/master/screenshots/weerwolf_game.PNG "Configure menu")
 
